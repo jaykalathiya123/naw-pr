@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   .card{
+    background-color: coral;
+        width: 900px;
+        height: 550px;
+        padding: 50px;
+        text-align: center;
+   }
+   .prodect {
+    text-align: center;
+    margin: 20px auto;
+   }
+   .d-flex{
+    display: flex;
+    flex-wrap: wrap;
+   }
+   p{
+    font-size: 20px;
+   }
+   h6{
+    font-size: 20px;
+   }
+    .container {
+        display: flex;
+        justify-content: center;
+        padding-top:200px ;
+
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+           <div class="">
+            <p>product name</p>
+            <h6 class="pro"></h6>
+           </div>
+           <div class="prodect">
+            <p>product price :</p>
+            <p>M.R.P:<h6 class="part-amount1"></h6></p>
+            <p>M.R.P:</p><h6 class="part-amount2"></h6>
+            <p>M.R.P:</p><h6 class="part-amount3"></h6>
+           </div>
+           <div class="">
+            <p>total: </p>
+            <h6 class="total"></h6>
+           </div>
+           <div class="">
+            <p>discount =10% </p>
+            <p>discount </p>
+            <h6 class="dis"></h6>
+           </div>
+    
+           <div class="">
+            <p>after discount payable amount </p>
+            <h6 class="d"></h6>
+           </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var p=500;
+        var v=600;
+        var c=400;
+        var t=(p+v+c);
+        var d=(t*10)/100;
+        var a=(t-d);
+    
+        document.querySelector(".pro").innerHTML = "Amul Ice-cream Vanilla 4Ltr ,&nbsp &nbsp  Cadbury Dairy Milk Maha Mega pake, &nbsp &nbsp    Cadbury Dairy Milk With Oreo 162G ";
+        document.querySelector(".part-amount1").innerHTML = p;
+        document.querySelector(".part-amount2").innerHTML = v;
+        document.querySelector(".part-amount3").innerHTML = c;
+        document.querySelector(".total").innerHTML = t;
+        document.querySelector(".dis").innerHTML = d;
+        document.querySelector(".d").innerHTML = a;
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+    .container {
+        display: flex;
+        justify-content: center;
+        padding-top:200px ;
+
+    }
+    p{
+        font-size: 20px;
+    }
+    body{
+        background-color: cadetblue;
+    }
+    .card{
+        background-color: coral;
+        width: 600px;
+        height: 550px;
+        padding: 50px;
+        text-align: center;
+    }
+    .Priciple-amount,.Rate,.Time,.accrued,.Interest {
+        margin: 30px 0;
+        background-color: white;
+        border-radius: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 id="title"></h1>
+            <div class="Priciple-amount">
+                <p class="amount"></p>
+                <p class="part-amount"></p>
+            </div>
+            <div class="Rate">
+                <p class="rate"></p>
+                <p id="amount-num"></p>
+            </div>
+            <div class="Time">
+                <p class="time-year"></p>
+                <p id="years"></p>
+            </div>
+            <div class="Interest">
+                <p class="inte"></p>
+                <p id="nume-inte"></p>
+            </div>
+            <div class="accrued">
+                <p class="total"></p>
+                <p id="total-num"></p>
+            </div>
+          
+    </div>
+
+
+
+    <script>
+        var p=5000;
+        var r=10;
+        var t=5;
+
+        var s=(p*r*t)/100;
+        var p=(100*s)/(r*t);
+        var r=(100*s)/(p*t);
+        var t=(100*s)/(p*r);
+        var a=p+s;
+        var f=a-p;
+
+        document.getElementById("title").innerHTML = "Simple Interest";
+        document.querySelector(".amount").innerHTML = " Principal Amount :";
+        document.querySelector(".part-amount").innerHTML = p;
+        document.querySelector(".rate").innerHTML = "  Rate of interest :";
+        document.getElementById("amount-num").innerHTML = r;
+        document.querySelector(".time-year").innerHTML = "  Number of years:";
+        document.getElementById("years").innerHTML = t;
+        document.querySelector(".total").innerHTML="Total amount : "
+        document.getElementById("total-num").innerHTML=a;
+        document.querySelector(".inte").innerHTML= "Interest :";
+        document.getElementById("nume-inte").innerHTML=f;
+    </script>
+</body>
+</html>
